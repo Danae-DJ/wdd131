@@ -1,5 +1,3 @@
-// Set the current year in the footer
-document.getElementById("currentyear").textContent = new Date().getFullYear();
-
-// Set the last modified date in the footer
-document.getElementById("lastModified").textContent = "Last Modified: " + document.lastModified;
+const lastModDate = new Date(document.lastModified);
+const options = { year: 'numeric', month: 'long', day: 'numeric' };
+document.getElementById("lastModified").textContent = "Last Modified: " + lastModDate.toLocaleDateString('en-US', options);
