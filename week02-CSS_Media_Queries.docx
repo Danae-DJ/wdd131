@@ -1,0 +1,81 @@
+CSS Media Queries
+
+The @media at-rule specifies condition(s) to create a block of CSS rules that are applied if the condition(s) evaluates to true. 
+
+Here is the general syntax is setting up a CSS media query:
+
+@media not|only mediatype and (expressions) {
+  /* CSS rules go here inside the @media query's opening and closing curly brackets {} */
+}
+
+Here is an example CSS media query which could be embedded in a CSS file or be the entire contents of a CSS file if wanted. This example only has one CSS rule.
+
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 2.5rem;
+    margin: 1rem;
+    color: navy;
+  }
+}
+
+Sample code explanation
+1️⃣ The @media screen and (min-width: 640px) {is the signature line of the @media query block of CSS rules to be applied if the conditions are met. In this case the conditions are if the media type is a screen and the viewport minimum width is at least 640 pixels wide.
+
+2️⃣ The h1 {is a heading 1 (<h1>) element selector which starts the defined CSS rule.
+
+3️⃣-5️⃣ The @font-size: 2.5rem; margin: 1rem; color: navy; are declarations to be applied to any <h1> elements if the @media query conditions are met.
+
+6️⃣ The first }closes the CSS rule for <h1> code elements.
+
+7️⃣ The last }closes the media query.
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout - Danae De la Cruz Jimenez WDD 131</title> <!-- Meets rubric title requirement -->
+    <link rel="stylesheet" href="styles/exampleweek02.css">
+</head>
+    </head>
+    <body translate="no" cz-shortcut-listen="true">
+        <section>
+            <h2>Headling 2</h2> == $0
+            <p>
+            </p>
+            <ul>...</ul>
+            <p></p>
+        </section>
+    </body>
+</html>
+
+
+exampleweek02.css:
+@media screen and (min-width: 32.5em) {
+  h2 {
+    color red;
+  }
+}
+
+h2 {
+    color: blue;
+    margin: 0;
+    border-bottom: 1px dashed #999;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+html{
+    font-family: sans-serif;
+    line-height: 1.15;
+    webkit-text-size-adjust: 100%
+    color: internal-root-color
+}
