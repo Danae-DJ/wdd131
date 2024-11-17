@@ -1,0 +1,140 @@
+:root {
+    --blue: rgb(29, 77, 114);
+    --blue-1: rgba(29, 77, 114, 0.1);
+    --blue-7: rgba(29, 77, 114, 0.7);
+    --brown: rgba(100, 50, 25, 1);
+    --yellow: rgba(255, 255, 0, 1);
+  }
+  
+  /*
+  * {
+    margin: 0;
+  }
+  
+  html,
+  body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    line-height: 1.5;
+    font-family: 'Montserrat Alternates', sans-serif;
+    color: #333;
+  }
+  
+  header {
+    background-color: var(--blue);
+    color: #fff;
+  }
+
+  nav {
+    background-color: #333;
+    display: flex;
+  }
+*/
+
+/* activity example **************************/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+
+/* mobile **************************/
+header {
+	background-color: var(--blue);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+header,
+main {
+	margin: 0 auto;
+}
+
+h1 {
+	font-size: 2rem;
+}
+
+nav {
+	background-color: #333;
+	margin: 0 auto;
+	max-width: 800px;
+}
+nav ul {
+	list-style-type: none;
+}
+nav a {
+	display: block;
+	color: #fff;
+	text-align: center;
+	padding: 1rem;
+	text-decoration: none;
+}
+
+nav a:hover {
+	text-decoration:overline;
+}
+
+.active {
+	color: var(--yellow);
+}
+
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+	nav ul {
+		display: flex;
+	}
+	nav ul li {
+		flex: 1 1 100%;
+	}
+}
+
+
+
+
+
+
+  footer {
+    font-size: 0.9rem;
+    padding: 1rem;
+    background-color: var(--blue);
+    color: #fff;
+  }
+  
+  footer p {
+    margin: 0;
+    text-align: center;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    margin: .5rem;
+  }  
+
+  .highlight {
+    color: yellow;
+    font-size: smaller;
+  }
+
+  figure {
+    margin: .5rem;
+  }
+  
+  figcaption {
+    font-size: smaller;
+    text-align: center;
+    font-style: italic;
+  }
