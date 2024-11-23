@@ -1,0 +1,60 @@
+/* Media Query for Larger Screens */
+@media (min-width: 768px) {
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+        grid-template-rows: auto auto; /* Two rows: one for hero, one for content */
+        gap: 20px;
+        padding: 20px;
+    }
+    
+    .hero {
+        grid-column: 1 / 4; /* Spans all columns */
+        grid-row: 1; /* First row */
+        background-image: url("../images/axolotl-big.webp");
+        background-size: cover;
+        background-position: center;
+        height: 300px; /* Set height for the hero section */
+    }
+    
+    .data {
+        grid-column: 1 / 2; /* First column */
+        grid-row: 2; /* Second row */
+        background: rgba(255, 255, 255, 0.8); /* Transparent white for readability */
+        padding: 20px;
+        border-radius: 8px;
+    }
+    
+    .weather {
+        grid-column: 3 / 4; /* Third column */
+        grid-row: 2; /* Second row */
+        background: rgba(255, 255, 255, 0.8); /* Transparent white for readability */
+        padding: 20px;
+        border-radius: 8px;
+        align-self: end; /* Align to the bottom of the column */
+    }
+    
+  
+    footer {
+      grid-column: 1 / 4; /* Spans all three columns */
+      text-align: center;
+      padding: 20px;
+    }
+  }
+  
+
+  /*Colors*/
+    .hero {
+        background-color: var(--blue); /* Ensures fallback if image fails to load */
+    }
+    
+    .data, .weather {
+        background: var(--blue-1); /* Consistent background */
+        color: var(--blue); /* Ensure readable text */
+    }
+    
+    footer {
+        background-color: var(--yellow);
+        color: var(--blue); /* Ensure contrast */
+    }
+    
