@@ -24,11 +24,12 @@
 
   <main>
     <section class="image">
-        <figure class="1">
-            <img class="animal" src="images/axolotl-small.webp" alt="Animal from mexico, Image"
-            width="200" height="136">
-            <figcaption> Axoloth by <a href="https://pixabay.com/es/users/ladamebucolique-4228283/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2193331">LaDameBucolique</a> in <a href="https://pixabay.com/es//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=2193331">Pixabay</a></figcaption>
-        </figure>
+        <div class="hero">
+            <picture>
+                <source srcset="images/axolotl-big.webp" media="(min-width: 1000px)">
+                <img src="images/axolotl-small.webp" alt="Animal from Mexico" width="1500" height="750">
+            </picture>
+        </div>
 
     </section class="data">
         <h2>Data</h2>
@@ -47,9 +48,10 @@
     <section class="weather">
         <h2>Weather</h2>
         <div class="picture">
-            <figure class="2">
+            <figure>
                 <img class="" src="images/clouds.webp" alt="picture weather"
                 width="80" height="80">
+            </figure>
         </div>
         <div class="label">
             <p>Temperature: #####
