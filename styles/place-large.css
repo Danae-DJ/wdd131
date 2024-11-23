@@ -1,68 +1,42 @@
 /* Media Query for Larger Screens */
 @media (min-width: 768px) {
-    /* General Styles for Larger Screens */
     main {
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
-        grid-template-rows: auto auto; /* Two rows: one for hero, one for content */
-        gap: 20px;
-        padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr; /* Three equal columns */
+      grid-template-rows: auto ; /* Rows adjust based on content */
+      gap: 20px;
+      position: relative; /* Allows the hero image to act as a background */
+      background-image: url("../images/axolotl-big.webp"); /* Set the hero image */
+      background-size: cover; /* Make the image cover the entire area */
+      background-position: center; /* Center the image */
+      padding: 20px;
     }
-
-    /* Hero Section */
-    .hero {
-        grid-column: 1 / 4; /* Spans all columns */
-        grid-row: 1; /* First row */
-        background-image: url("../images/axolotl-big.webp");
-        background-size: cover; /* Covers the entire section */
-        background-position: center; /* Centers the image */
-        height: 300px; /* Fixed height for the hero section */
-        border-radius: 8px; /* Optional: Rounded corners for aesthetic */
-    }
-
-    /* Data Section */
+  
     .data {
-        grid-column: 1 / 2; /* First column */
-        grid-row: 2; /* Second row */
-        background: rgba(255, 255, 255, 0.8); /* Transparent white for readability */
-        padding: 20px;
-        border-radius: 8px;
-        color: var(--blue); /* Ensure text readability */
+      grid-column: 1 / 2; /* First column */
+      grid-row: 1; /* Top row */
+      background: rgba(255, 255, 255, 0.8); /* Transparent white for readability */
+      padding: 20px;
+      border-radius: 8px;
     }
-
-    /* Weather Section */
+  
     .weather {
-        grid-column: 3 / 4; /* Third column */
-        grid-row: 2; /* Second row */
-        background: rgba(255, 255, 255, 0.8); /* Transparent white for readability */
-        padding: 20px;
-        border-radius: 8px;
-        align-self: end; /* Align to the bottom of the column */
-        color: var(--blue); /* Ensure text readability */
+      grid-column: 3 / 4; /* Third column */
+      grid-row: 2; /* Bottom row */
+      background: rgba(255, 255, 255, 0.8); /* Transparent white for readability */
+      padding: 20px;
+      border-radius: 8px;
+      align-self: end; /* Align to the bottom of the column */
     }
-
-    /* Footer Section */
+  
     footer {
-        grid-column: 1 / 4; /* Spans all three columns */
-        text-align: center;
-        padding: 20px;
-        background-color: var(--yellow);
-        color: var(--blue); /* Contrast with background */
+      grid-column: 1 / 4; /* Spans all three columns */
+      text-align: center;
+      padding: 20px;
+      background-color: var(--primary-color);
+      color: #fff;
     }
+  }
+  
 
-    /* Typography Adjustments */
-    h2 {
-        color: var(--green); /* Matching consistent design */
-    }
-
-    p {
-        color: var(--blue); /* Better contrast for readability */
-    }
-
-    /* Optional: Add hover effects for interactivity */
-    .data:hover, .weather:hover {
-        background: rgba(255, 255, 255, 0.9); /* Slightly brighter on hover */
-        transform: scale(1.02); /* Subtle zoom effect */
-        transition: all 0.2s ease-in-out; /* Smooth animation */
-    }
-}
+  
