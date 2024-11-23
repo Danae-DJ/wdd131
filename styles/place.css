@@ -13,7 +13,7 @@
   }
   
   body {
-    font-family: var(--blue-1);
+    font-family:'Montserrat Alternates';
     margin: 0;
     padding: 0;
     background-color: var(--blue-7);
