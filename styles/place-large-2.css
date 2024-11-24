@@ -10,7 +10,7 @@
     }
 
     /* Hero Section */
-    .hero {
+    .image .hero{
         grid-column: 1 / 4; /* Spans all columns */
         grid-row: 1; /* First row */
         background-image: url("../images/axolotl-big.webp");
