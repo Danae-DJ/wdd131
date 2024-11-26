@@ -15,7 +15,7 @@
     .data {
       grid-column: 1 / 2; /* First column */
       grid-row: 1; /* Top row */
-      background: rgba(255, 255, 255, 0.8); /* Transparent white for readability */
+      background: rgba(255, 255, 255, 0.1); /* Transparent white for readability */
       padding: 20px;
       border-radius: 8px;
     }
@@ -23,7 +23,7 @@
     .weather {
       grid-column: 3 / 4; /* Third column */
       grid-row: 2; /* Bottom row */
-      background: rgba(255, 255, 255, 0.8); /* Transparent white for readability */
+      background: rgba(255, 255, 255, 0.1); /* Transparent white for readability */
       padding: 20px;
       border-radius: 8px;
       align-self: end; /* Align to the bottom of the column */
@@ -33,8 +33,8 @@
       grid-column: 1 / 4; /* Spans all three columns */
       text-align: center;
       padding: 20px;
-      background-color: var(--primary-color);
-      color: #fff;
+      background-color: var(--yellow);
+      color: var(--blue);
     }
   }
   
