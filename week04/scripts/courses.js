@@ -40,7 +40,8 @@ const aCourse = {
       this.sections[sectionIndex].enrolled--;
       renderSections(this.sections);
     }
-  },*/
+  },
+};*/
 
 //activity 3: combined enrollStudent and dropStudent, change for this:
   changeEnrollment: function (sectionNum, add = true) {
