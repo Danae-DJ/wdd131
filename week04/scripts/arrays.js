@@ -1,12 +1,26 @@
 //  arrays.js
 const steps = ["one", "two", "three"];
-const listTemplate(step) {
-  return //the html string made from step
-}
-const stepsHtml = // use map to convert the list from strings to HTML
-document.querySelector("#myList").innerHTML = // set the innerHTML
+const listTemplate=(step) =>{
+  return `<li>${step}</li>`;
+} //the html string made from step
 
+const stepsHtml = steps.map(listTemplate);// use map to convert the list from strings to HTML
+document.querySelector("#myList").innerHTML = stepsHtml.join();// set the innerHTML
 
+/* I did a fix
+// arrays.js
+const steps = ["one", "two", "three"];
+
+// Correcting the function declaration
+const listTemplate = (step) => {
+  return `<li>${step}</li>`;
+};
+
+// Convert steps to HTML list items
+const stepsHtml = steps.map(listTemplate);
+
+// Set the innerHTML, joining the items without a separator
+document.querySelector("#myList").innerHTML = stepsHtml.join('');*/
 
 
 
