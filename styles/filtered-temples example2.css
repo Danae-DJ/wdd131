@@ -15,7 +15,6 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    line-height: 1.6;
 }
 
 /* Header and Navigation */
@@ -24,17 +23,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+    padding: 20px;
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 h1 {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    color: white;
 }
 
 nav {
-    display: flex;
-    gap: 10px;
+    position: relative;
 }
 
 /* Hamburger button */
@@ -124,44 +123,6 @@ figcaption {
     text-align: center;
     font-style: italic;
 }
-
-.res-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
-}
-
-.res-grid section {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.res-grid section:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-.res-grid img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.res-grid h3 {
-    font-size: 1.2rem;
-    text-align: center;
-    margin: 10px 0;
-}
-
-.res-grid p {
-    padding: 10px;
-    font-size: 0.9rem;
-}
-
 
 /* Footer */
 footer {
