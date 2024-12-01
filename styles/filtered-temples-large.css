@@ -1,0 +1,16 @@
+@media (min-width: 640px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav {
+        display: flex;
+        gap: 15px;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
