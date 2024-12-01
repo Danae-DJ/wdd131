@@ -1,0 +1,14 @@
+/* Larger Views ******************************/
+@media (min-width: 640px) {
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    nav ul {
+        display: flex;
+    }
+
+    nav ul li {
+        flex: 1 1 100%;
+    }
+}
