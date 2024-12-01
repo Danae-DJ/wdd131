@@ -18,33 +18,24 @@ hamburger.addEventListener('click', () => {
     hamburger.setAttribute('aria-expanded', navMenu.classList.contains('show'));
 });*/
 
+// Set the current year and last modified date
 let d = new Date();
 document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
-document.querySelector('#lastModified').textContent = `Last Modification: ${document.lastModified}`;
+document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
-// Navigation Toggle for Small Screens
-const hambutton = document.querySelector('#hambutton');
-const navmenu = document.querySelector('#navmenu');
+// Hamburger menu functionality
+const hambutton = document.querySelector("#hambutton");
+const navmenu = document.querySelector("#navmenu");
 
-hambutton.addEventListener('click', () => {
-  navmenu.classList.toggle('show');
+hambutton.addEventListener("click", () => {
+    navmenu.classList.toggle("show"); // Toggle the "show" class on the nav menu
 });
 
-// Highlight Active Link
-function toggleActive(element) {
-  document.querySelectorAll("#navmenu a").forEach(link => {
-      link.classList.remove("active");
-      link.removeAttribute("aria-current");
-  });
-  element.classList.add("active");
-  element.setAttribute("aria-current", "page");
-}
-
-document.querySelectorAll("#navmenu a").forEach(link => {
-  link.addEventListener("click", (event) => {
-      event.preventDefault();
-      toggleActive(event.target);
-  });
+// Ensure the nav menu is hidden when resizing back to larger screens
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 640) {
+        navmenu.classList.remove("show");
+    }
 });
 //cards//
 const temples = [
