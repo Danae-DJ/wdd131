@@ -37,7 +37,7 @@ window.addEventListener("resize", () => {
         navmenu.classList.remove("show");
     }
 });
-//cards//
+//cards: video repherence: https://www.loom.com/share/af4f1ddda0b84204b214f72b544c02b3//
 const temples = [
     {
       templeName: "Aba Nigeria",
