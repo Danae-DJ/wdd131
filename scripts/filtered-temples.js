@@ -22,12 +22,31 @@ let d = new Date();
 document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
 document.querySelector('#lastModified').textContent = `Last Modification: ${document.lastModified}`;
 
+// Navigation Toggle for Small Screens
 const hambutton = document.querySelector('#hambutton');
+const navmenu = document.querySelector('#navmenu');
 
-hambutton.addEventListener('click', () => {})
+hambutton.addEventListener('click', () => {
+  navmenu.classList.toggle('show');
+});
 
-function toggleActive(element) {}
+// Highlight Active Link
+function toggleActive(element) {
+  document.querySelectorAll("#navmenu a").forEach(link => {
+      link.classList.remove("active");
+      link.removeAttribute("aria-current");
+  });
+  element.classList.add("active");
+  element.setAttribute("aria-current", "page");
+}
 
+document.querySelectorAll("#navmenu a").forEach(link => {
+  link.addEventListener("click", (event) => {
+      event.preventDefault();
+      toggleActive(event.target);
+  });
+});
+//cards//
 const temples = [
     {
       templeName: "Aba Nigeria",
