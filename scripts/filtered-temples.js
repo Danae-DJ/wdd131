@@ -19,7 +19,8 @@ hamburger.addEventListener('click', () => {
 });*/
 
 // Set the current year and last modified date
-let d = new Date();
+//let d = new Date();
+const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").innerHTML = `&copy;${d.getFullYear()}`;
 document.querySelector("#lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
