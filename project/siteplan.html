@@ -1,15 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-us">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Site Plan</title>
-  
-  <!-- Link to Google Fonts -->
+  <title>WDD131 | Site Plan</title>
+  <meta name="description" content="It is the outline and plan for the creation of the cycling guide along with the acquisition of the necessary equipment.">
+  <meta name="author" content="Dánae De la Cruz Jiménez">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/siteplan.css">
+  <script src="scripts/siteplan.js" defer></script>
 </head>
 <body>
   <!-- Site Name -->
@@ -67,12 +68,8 @@
 
   <!-- Footer -->
   <footer>
-    <p>&copy; 2024 My Cycling Website | Last Modified: <span id="lastModified"></span></p>
+    <p><span id="currentYear"></span> 🌺 My Cycling Website | Dánae De la Cruz Jiménez 🌺 Mexico </p>
+    <p class="highlight" id="lastModified">Last Modification: 11/11/2024 12:00:00</p>
   </footer>
-
-  <!-- Last Modified -->
-  <script>
-    document.getElementById("lastModified").textContent = document.lastModified;
-  </script>
 </body>
 </html>
