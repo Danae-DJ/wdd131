@@ -20,7 +20,7 @@
     /* Headings */
     h1, h2, h3 {
       font-family: 'Roboto', sans-serif;
-      color: var(--color4); /* Olive Green for headings */
+      color: #2b1f17; /* Olive Green for headings */
     }
 
     /* Links */
