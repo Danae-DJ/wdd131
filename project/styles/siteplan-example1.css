@@ -1,0 +1,66 @@
+/*:root {
+    --color1:  #fffab3 ;
+    --color2:  #a2e5d2 ;
+    --color3:  #63b397 ;
+    --color4:  #9dab34 ;
+    --color5:  #2c2321 ;
+}
+    
+
+*/
+
+/* General Styles */
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #ECF0F1;
+    color: #2C3E50;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #2C3E50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* Sections */
+section {
+    padding: 1.5rem;
+    margin: 1rem auto;
+    max-width: 800px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: "Montserrat", sans-serif;
+    color: #2C3E50;
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    border-bottom: 2px solid #E74C3C;
+    padding-bottom: 0.5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #2C3E50;
+    color: white;
+}

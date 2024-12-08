@@ -1,6 +1,76 @@
-Usar en mi negocio
-.color1 { #fffab3 };
-.color2 { #a2e5d2 };
-.color3 { #63b397 };
-.color4 { #9dab34 };
-.color5 { #2c2321 };
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Plan</title>
+  
+  <!-- Link to Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/siteplan-large.css">
+</head>
+<body>
+  <!-- Site Name -->
+  <header>
+    <h1>My Cycling Website</h1>
+    <p>Learn how to choose the best bicycle for your needs!</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#purpose">Site Purpose</a>
+    <a href="#scenarios">Scenarios</a>
+    <a href="#color-schema" class="active">Color Schema</a>
+    <a href="#typography">Typography</a>
+    <a href="#wireframe">Wireframe</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <section id="purpose">
+      <h2>Site Purpose</h2>
+      <p>The website provides information about choosing the best bicycle for various activities, whether for sport, hobby, or transportation.</p>
+    </section>
+
+    <section id="scenarios">
+      <h2>Scenarios</h2>
+      <p>1. What is the best bicycle for urban commuting?</p>
+      <p>2. Which bicycles are best for mountain trails?</p>
+    </section>
+
+    <section id="color-schema">
+      <h2>Color Schema</h2>
+      <p>The following colors are used throughout the site:</p>
+      <ul>
+        <li><strong>--color1:</strong> Light Yellow (Background)</li>
+        <li><strong>--color2:</strong> Pastel Green (Sections)</li>
+        <li><strong>--color3:</strong> Medium Green (Buttons, Links)</li>
+        <li><strong>--color4:</strong> Olive Green (Headings)</li>
+        <li><strong>--color5:</strong> Dark Brown (Text, Navigation Background)</li>
+      </ul>
+    </section>
+
+    <section id="typography">
+      <h2>Typography</h2>
+      <p>The website uses the <strong>Roboto</strong> font for all headings and text content. The font provides a clean and modern look suitable for the topic.</p>
+    </section>
+
+    <section id="wireframe">
+      <h2>Wireframe</h2>
+      <p>See the attached wireframe diagrams for mobile and desktop views.</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 My Cycling Website | Last Modified: <span id="lastModified"></span></p>
+  </footer>
+
+  <!-- Last Modified -->
+  <script>
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
