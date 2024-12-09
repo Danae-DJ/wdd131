@@ -23,7 +23,25 @@
 
   <main>
     <h2>Share Your Thoughts</h2>
-    <form method="get" action="thanks.html" class="wf1">
+    <p id="reviewCountDisplay">Reviews Submitted: 0</p>
+    <form method="get" action="form-thanks.html" class="wf1">
+
+      <fieldset>
+        <legend>Product Name</legend>
+        <label for="productName">Select a product:
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Please Select &#9662;</option>
+            <option value="necklace">necklace</option>
+            <option value="choker">choker</option>
+            <option value="bracelet">bracelet</option>
+            <option value="watch">watch</option>
+            <option value="anklet">anklet</option>
+            <option value="belt">belt</option>
+            <option value="hat">hat</option>
+            <option value="bows">bows</option>
+            </select>
+        </label>
+      </fieldset>
       <!-- Overall Rating -->
       <fieldset>
         <legend>Overall Rating</legend>
@@ -88,4 +106,5 @@
     <p class="highlight" id="lastModified">Last Modification: 11/11/2024 12:00:00</p>
   </footer>
 </body>
+
 </html>
