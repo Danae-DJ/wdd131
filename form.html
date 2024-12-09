@@ -13,15 +13,72 @@
     href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat+Alternates&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="styles/form.css">
-  <script src="scripts/form.js" defer></script>
-  <script src="scripts/form.js" defer></script>
-  <script src="scripts/form.js" defer></script>
+  <link rel="stylesheet" href="styles/form-small.css">
+  <link rel="stylesheet" href="styles/form-medium.css">
+  <link rel="stylesheet" href="styles/form-large.css">
   <script src="scripts/form.js" defer></script>
 </head>
 
 <body>
-    <header></header>
-    <main></main>
+    <header>
+      <h1>Jewelry Product Review</h1>
+    </header>
+
+    <main>
+      <h2></h2>
+      <form method="get" action="thanks.html" class="wf1">
+      <fieldset>
+        <label>Product Name
+            <select name="subject">
+            <option value="">Please Select &#9662;</option>
+            <option value="necklace">necklace</option>
+            <option value="choker">choker</option>
+            <option value="bracelet">bracelet</option>
+            <option value="watch">watch</option>
+            <option value="anklet">anklet</option>
+            <option value="belt">belt</option>
+            <option value="hat">hat</option>
+            <option value="bows">bows</option>
+            </select>
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Overall Rating</legend>
+        <label><input type="radio" name="rating" value="1" required>1 Star</label>
+        <label><input type="radio" name="rating" value="2">2 Stars</label>
+        <label><input type="radio" name="rating" value="3">3 Stars</label>
+        <label><input type="radio" name="rating" value="4">4 Stars</label>
+        <label><input type="radio" name="rating" value="5">5 Stars</label>
+      </fieldset>
+
+      <fieldset>
+        <label>Date of Installation<input type="date" name="completeDate"></label>
+      </fieldset>
+
+      <fieldset>
+        <div>Which features did you find useful in the product?</div>
+        <div>(Check all that apply)</div><!--""name:audience" with a 1/number, you can mark all options: "name:audience1"-->
+        <label><input type="checkbox" name="editing1" value="yes">Durability</label>
+        <label><input type="checkbox" name="code2" value="yes">Ease of Use</label>
+        <label><input type="checkbox" name="process3" value="yes">Performance</label>
+        <label><input type="checkbox" name="client4" value="yes">Desing</label>
+      </fieldset>
+
+      <fieldset>
+        <div>Written Review (Optional)</div>
+        <label><input type="text" name="fname"></label>
+      </fieldset>
+
+      <fieldset>
+        <div>Your Name (Optional)</div>
+        <label><input type="text" name="fname"></label>
+      </fieldset>
+
+      <input type="submit" value="Post Review">
+
+      </form>
+    </main>
     <footer>
         <p><span id="currentYear"></span> 🌺 Dánae De la Cruz Jiménez 🌺 Mexico </p>
         <p class="highlight" id="lastModified">Last Modification: 11/11/2024 12:00:00</p>
