@@ -9,9 +9,7 @@
   <meta name="author" content="Dánae De la Cruz Jiménez">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat+Alternates&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat+Alternates&display=swap"  rel="stylesheet">
   <link rel="stylesheet" href="styles/form-small.css">
   <link rel="stylesheet" href="styles/form-medium.css">
   <link rel="stylesheet" href="styles/form-large.css">
@@ -19,68 +17,75 @@
 </head>
 
 <body>
-    <header>
-      <h1>Jewelry Product Review</h1>
-    </header>
+  <header>
+    <h1>Jewelry Product Review</h1>
+  </header>
 
-    <main>
-      <h2></h2>
-      <form method="get" action="thanks.html" class="wf1">
-        <fieldset>
-          <div>Overall Rating</div>
-          <!-- Radio buttons for rating -->
-          <label for="rating1">
-            <input type="radio" id="rating1" name="rating" value="1" required>
-            ⭐
-          </label>
-          <label for="rating2">
-            <input type="radio" id="rating2" name="rating" value="2">
-            ⭐⭐
-          </label>
-          <label for="rating3">
-            <input type="radio" id="rating3" name="rating" value="3">
-            ⭐⭐⭐
-          </label>
-          <label for="rating4">
-            <input type="radio" id="rating4" name="rating" value="4">
-            ⭐⭐⭐⭐
-          </label>
-          <label for="rating5">
-            <input type="radio" id="rating5" name="rating" value="5">
-            ⭐⭐⭐⭐⭐
-          </label>
-        </fieldset>
-      
+  <main>
+    <h2>Share Your Thoughts</h2>
+    <form method="get" action="thanks.html" class="wf1">
+      <!-- Overall Rating -->
       <fieldset>
-        <label>Date of Installation<input type="date" name="completeDate" required></label>
+        <legend>Overall Rating</legend>
+        <label for="rating1">
+          <input type="radio" id="rating1" name="rating" value="1" required>
+          ⭐
+        </label>
+        <label for="rating2">
+          <input type="radio" id="rating2" name="rating" value="2">
+          ⭐⭐
+        </label>
+        <label for="rating3">
+          <input type="radio" id="rating3" name="rating" value="3">
+          ⭐⭐⭐
+        </label>
+        <label for="rating4">
+          <input type="radio" id="rating4" name="rating" value="4">
+          ⭐⭐⭐⭐
+        </label>
+        <label for="rating5">
+          <input type="radio" id="rating5" name="rating" value="5">
+          ⭐⭐⭐⭐⭐
+        </label>
       </fieldset>
 
+      <!-- Date of Installation -->
       <fieldset>
-        <div>Which features did you find useful in the product?</div>
-        <div>(Check all that apply)</div><!--""name:audience" with a 1/number, you can mark all options: "name:audience1"-->
-        <label><input type="checkbox" name="editing1" value="yes" required>Durability</label>
-        <label><input type="checkbox" name="code2" value="yes">Ease of Use</label>
-        <label><input type="checkbox" name="process3" value="yes">Performance</label>
-        <label><input type="checkbox" name="client4" value="yes">Desing</label>
+        <legend>Date of Installation</legend>
+        <label for="installation-date">When did you install the product?</label>
+        <input type="date" id="installation-date" name="completeDate" required>
       </fieldset>
 
+      <!-- Useful Features -->
       <fieldset>
-        <div>Written Review (Optional)</div>
-        <label><input type="text" name="fname"></label>
+        <legend>Which features did you find useful in the product?</legend>
+        <div>(Check all that apply)</div>
+        <label><input type="checkbox" name="features" value="Durability" required>Durability</label>
+        <label><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
+        <label><input type="checkbox" name="features" value="Performance">Performance</label>
+        <label><input type="checkbox" name="features" value="Design">Design</label>
       </fieldset>
 
+      <!-- Written Review -->
       <fieldset>
-        <div>Your Name (Optional)</div>
-        <label><input type="text" name="fname"></label>
+        <legend>Written Review (Optional)</legend>
+        <textarea name="review" placeholder="Write your review here..."></textarea>
       </fieldset>
 
+      <!-- Your Name -->
+      <fieldset>
+        <legend>Your Name (Optional)</legend>
+        <input type="text" name="name" placeholder="Enter your name">
+      </fieldset>
+
+      <!-- Submit Button -->
       <input type="submit" value="Post Review">
+    </form>
+  </main>
 
-      </form>
-    </main>
-    <footer>
-        <p><span id="currentYear"></span> 🌺 Dánae De la Cruz Jiménez 🌺 Mexico </p>
-        <p class="highlight" id="lastModified">Last Modification: 11/11/2024 12:00:00</p>
-    </footer>
+  <footer>
+    <p><span id="currentYear"></span> 🌺 Dánae De la Cruz Jiménez 🌺 Mexico </p>
+    <p class="highlight" id="lastModified">Last Modification: 11/11/2024 12:00:00</p>
+  </footer>
 </body>
 </html>
