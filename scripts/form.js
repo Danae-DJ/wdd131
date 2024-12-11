@@ -24,9 +24,8 @@ products.forEach(product => {
 // Review count handling
 const reviewCount = localStorage.getItem("reviewCount") || 0;
 localStorage.setItem("reviewCount", parseInt(reviewCount) + 1);
-/*document.getElementById("reviewCountDisplay").textContent =
+document.getElementById("reviewCountDisplay").textContent =
   `Reviews Submitted: ${reviewCount}`;
-*/
 if (document.getElementById("totalReviews")) {
   document.getElementById("totalReviews").textContent = reviewCount;
 }
