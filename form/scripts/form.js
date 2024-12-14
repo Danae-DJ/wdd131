@@ -3,7 +3,6 @@ const lastModDate = new Date(document.lastModified);
 const options = { year: 'numeric', month: 'long', day: 'numeric' };
 document.getElementById("lastModified").textContent =
   "Last Modified: " + lastModDate.toLocaleDateString('en-US', options);
-
 // Populate product dropdown dynamically
 const products = [
   { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
@@ -19,8 +18,7 @@ products.forEach(product => {
   option.value = product.name;
   option.textContent = product.name;
   productSelect.appendChild(option);
-});
-
+})
 // Review count handling
 const reviewCount = localStorage.getItem("reviewCount") || 0;
 localStorage.setItem("reviewCount", parseInt(reviewCount) + 1);
