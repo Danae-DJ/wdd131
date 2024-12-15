@@ -19,32 +19,19 @@
 <body>
   <header>
     <h1>Cycling the World</h1>
+    <picture>
+      <img src="images/cyclist-logo.svg" alt="logo" width="50">
+    </picture>
   </header>
 
   <main>
     <h2>Share Your Thoughts</h2>
-    <p id="reviewCountDisplay">Reviews Submitted: 0</p>
     <form method="get" action="form-thanks.html" class="wf1">
       <!-- Overall Rating -->
-      <fieldset>
-        <legend>Product Name</legend>
-        <label for="productName">Select a product:
-          <select id="productName" name="productName" required>
-            <option value="" disabled selected>Please Select &#9662;</option>
-            <option value="necklace">necklace</option>
-            <option value="choker">choker</option>
-            <option value="bracelet">bracelet</option>
-            <option value="watch">watch</option>
-            <option value="anklet">anklet</option>
-            <option value="belt">belt</option>
-            <option value="hat">hat</option>
-            <option value="bows">bows</option>
-          </select>
-        </label>
-      </fieldset>
 
       <fieldset>
         <legend>Overall Rating</legend>
+        <div>How much did our page help you?</div>
         <label for="rating1">
           <input type="radio" id="rating1" name="rating" value="1" required>
           ⭐
@@ -66,44 +53,54 @@
           ⭐⭐⭐⭐⭐
         </label>
       </fieldset>
-
-      <!-- Date of Installation -->
-      <fieldset>
-        <legend>Date of Installation</legend>
-        <label for="installation-date">When did you install the product?</label>
-        <input type="date" id="installation-date" name="completeDate" required>
-      </fieldset>
-
       <!-- Useful Features -->
       <fieldset>
-        <legend>Which features did you find useful in the product?</legend>
+        <legend>The information we provided you was...</legend>
         <div>(Check all that apply)</div>
-        <label><input type="checkbox" name="features" value="Durability" required>Durability</label>
-        <label><input type="checkbox" name="features" value="Ease of Use">Ease of Use</label>
-        <label><input type="checkbox" name="features" value="Performance">Performance</label>
-        <label><input type="checkbox" name="features" value="Design">Design</label>
+        <label><input type="checkbox" name="features" value="clear" required>Clear</label>
+        <label><input type="checkbox" name="features" value="presice">Precise</label>
+        <label><input type="checkbox" name="features" value="efficient">Efficient</label>
+        <label><input type="checkbox" name="features" value="deficient">Deficient</label>
+        <label><input type="checkbox" name="features" value="mediocre">Mediocre</label>
+        <label><input type="checkbox" name="features" value="confused">Confused</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>What was your favorite section?</legend>
+        <label for="productName">Select a section:
+          <select id="productName" name="productName" required>
+            <option value="" disabled selected>Please Select &#9662;</option>
+            <option value="home">Home</option>
+            <option value="purpose">Purpose</option>
+            <option value="cycling">Cycling</option>
+            <option value="bicycles">Bicycles</option>
+            <option value="equipment">Equipment</option>
+          </select>
+        </label>
       </fieldset>
 
       <!-- Written Review -->
       <fieldset>
-        <legend>Written Review (Optional)</legend>
-        <textarea name="review" placeholder="Write your review here..."></textarea>
-      </fieldset>
+            <legend>Do you have any personal questions? We want to help you</legend>
+            <div>(Optional)</div>
+            <label for="">Name/Nick name*<input type="text" name="fname" required></label>
+            <label>Email*<input type="email" name="email" placeholder="someone@gmail.com" required></label>
+            <label>Date*<input type="date" id="date" name="completeDate" required></label>
+            <label>Your question(s):</label>
+            <textarea name="review" placeholder="Write your questions here..."></textarea>
+      
+        </fieldset>
 
-      <!-- Your Name -->
-      <fieldset>
-        <legend>Your Name (Optional)</legend>
-        <input type="text" name="name" placeholder="Enter your name">
-      </fieldset>
 
       <!-- Submit Button -->
-      <input type="submit" value="Post Review">
+      <input type="submit" value="Send">
     </form>
   </main>
 
   <footer>
     <p><span id="currentYear"></span> 🌺 Dánae De la Cruz Jiménez 🌺 Mexico </p>
     <p class="highlight" id="lastModified">Last Modification: 11/11/2024 12:00:00</p>
+    <!--<p id="reviewCountDisplay">Reviews Submitted: 0</p>-->
   </footer>
 </body>
 </html>
