@@ -1,0 +1,88 @@
+:root {
+    /* Define the color schema */
+    --color1: #fffab3; /* Light Yellow */
+    --color2: #a2e5d2; /* Pastel Green */
+    --color3: #63b397; /* Medium Green */
+    --color4: #16271c; /* Deep Green */
+    --color5: #2c2321; /* Dark Brown */
+  
+  }
+/* Prevent adjustments of font size after orientation changes in IE on Windows Phone and in iOS.  */
+html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+
+/*----------- apply a natural box layout model to all elements --------------*/
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+
+  /* Typography */
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color5); /* Text color */
+    background-color: var(--color1); /* Light Yellow Background */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color4); /* Deep Green for headings */
+  }
+  
+  /* Links */
+  a {
+    color: var(--color3); /* Medium Green for links */
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: var(--color2); /* Pastel Green on hover */
+  }
+  
+  /* Section Backgrounds */
+  section {
+    padding: 20px;
+    background-color: var(--color2); /* Pastel Green Background */
+    margin: 10px 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Buttons */
+  button {
+    background-color: var(--color3); /* Medium Green */
+    color: var(--color1); /* Light Yellow */
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: var(--color4); /* Deep Green */
+  }
+  
+  /* Navigation */
+  nav {
+    background-color: var(--color5); /* Dark Brown Background */
+    color: var(--color1); /* Light Yellow Text */
+    padding: 10px;
+  }
+  
+  nav a {
+    margin-right: 15px;
+    color: var(--color1); /* Light Yellow */
+  }
+  
+  nav a.active {
+    font-weight: bold;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--color5); /* Dark Brown */
+    color: var(--color1); /* Light Yellow */
+  }
+  

@@ -1,11 +1,27 @@
-/* Root color variables */
 :root {
-    --color1: #d3c6cc;
-    --color2: #e2c3c6;
-    --color3: #eecfc4;
-    --color4: #ffffcc;
-    --color5: #838383;
-}
+    /* Define the color schema */
+    --color1: #fffab3; /* Light Yellow */
+    --color2: #a2e5d2; /* Pastel Green */
+    --color3: #63b397; /* Medium Green */
+    --color4: #16271c; /* Deep Green */
+    --color5: #2c2321; /* Dark Brown */
+  
+  }
+  
+  /* Typography */
+  body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color5); /* Text color */
+    background-color: var(--color1); /* Light Yellow Background */
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Headings */
+  h1, h2, h3 {
+    font-family: 'Roboto', sans-serif;
+    color: var(--color4); /* Deep Green for headings */
+  }
 
 /* General styles */
 html {
