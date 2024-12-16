@@ -97,3 +97,32 @@ const bicycles = [
 
     
 ]
+
+createBicycleCard(bicycles);
+
+
+function createTempleCard(filteredBicycles) {
+    document.querySelector(".res-grid").innerHTML = "";
+    filteredBicycles.forEach(bicycle => {
+        let card = document.createElement("section");
+        let img = document.createElement("img");
+        let name = document.createElement("h3");
+        let description = document.createElement("p");
+        //let shopUrl = document.createElement("img"); //add link shopUrl like a svg image 
+
+        name.textContent = bicycle.bicycleName;
+        description.innerHTML = `<span class="label">Description:</span> ${temple.location}`;
+        img.setAttribute("src", bicycle.imageUrl);
+        img.setAttribute("alt", `${bicycle.templeName}`);
+        img.setAttribute("loading", "lazy");
+
+        
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(description);
+        card.appendChild(shopUrl);
+        
+        document.querySelector(".res-grid").appendChild(card);
+
+});
+}
