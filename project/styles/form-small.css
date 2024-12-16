@@ -1,0 +1,140 @@
+/* Root color variables */
+:root {
+    --color1: #d3c6cc;
+    --color2: #e2c3c6;
+    --color3: #eecfc4;
+    --color4: #ffffcc;
+    --color5: #838383;
+}
+
+/* General styles */
+html {
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 16px;
+    font-family: Verdana, sans-serif;
+    background-color: var(--color1);
+}
+
+/* Header styling */
+header {
+    padding: 0.5rem 2%;
+    background-color: var(--color2);
+    color: var(--color5);
+}
+
+header h1 {
+    margin: 0;
+    font-family: 'Great Vibes', cursive;
+    color: black;
+}
+
+/* Main form styling */
+main {
+    padding: 2%;
+    background-color: var(--color4);
+    border-radius: 8px;
+}
+
+/* Form fieldsets */
+.wf1 fieldset {
+    margin: 2rem 0;
+    border: 1px solid var(--color5);
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.wf1 legend {
+    color: black;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+/* Labels and input styling */
+.wf1 label {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: rgb(72, 53, 30);
+}
+
+.wf1 input,
+.wf1 textarea {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    padding: 0.75rem;
+    border: 1px solid var(--color5);
+    border-radius: 6px;
+    margin-top: 0.5rem;
+    background-color: var(--color3);
+    color: var(--color5);
+}
+
+/* Required field styling */
+.wf1 input:required {
+    border: 2px solid red;
+}
+
+.wf1 input:required:valid {
+    border: 2px solid green;
+}
+
+/* Checkbox and radio styling */
+.wf1 input[type="checkbox"],
+.wf1 input[type="radio"] {
+    margin-right: 8px;
+}
+
+.wf1 input[type="submit"] {
+    background-color: var(--color3);
+    color: black;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.wf1 input[type="submit"]:hover {
+    background-color: var(--color2);
+}
+
+select {
+    padding: 0.5rem;
+    border: 1px solid var(--color5);
+    border-radius: 6px;
+    background-color: var(--color3);
+    color: var(--color5);
+}
+
+select:focus {
+    outline: 2px solid var(--color2);
+}
+
+button {
+    cursor: pointer;
+    background-color: var(--color3);
+    color: black;
+    padding: 0.8rem;
+    border: none;
+    border-radius: 6px;
+    width: auto;
+}
+button:hover {
+    background-color: var(--color2);
+}
+
+
+/*----------- original video reference: https://www.youtube.com/watch?v=vCG7tfn9Yw8 --------------*/
