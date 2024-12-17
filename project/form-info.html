@@ -25,7 +25,7 @@
     <form method="get" action="thanks.html" class="wf1">
       <!-- Overall Rating -->
       <fieldset>
-        <legend>Overall Rating</legend>
+        <div>Overall Rating</div>
         <div>How much did our page help you?</div>
         <label><input type="radio" name="rating" value="1" required> ⭐</label>
         <label><input type="radio" name="rating" value="2"> ⭐⭐</label>
@@ -36,9 +36,9 @@
 
       <!-- Useful Features -->
       <fieldset>
-        <legend>The information was...</legend>
+        <div>The information was...</div>
         <div>(Check all that apply)</div>
-        <label><input type="checkbox" name="features" value="clear"> Clear</label>
+        <label><input type="checkbox" name="features" value="clear" required> Clear</label>
         <label><input type="checkbox" name="features" value="precise"> Precise</label>
         <label><input type="checkbox" name="features" value="efficient"> Efficient</label>
         <label><input type="checkbox" name="features" value="deficient"> Deficient</label>
@@ -46,7 +46,7 @@
 
       <!-- Favorite Section -->
       <fieldset>
-        <legend>What was your favorite section?</legend>
+        <div>What was your favorite section?</div>
         <label for="favoriteSection">Select a section:
           <select id="favoriteSection" name="favoriteSection" required>
             <option value="" disabled selected>Please Select &#9662;</option>
@@ -56,12 +56,12 @@
 
       <!-- Personal Questions -->
       <fieldset>
-        <legend>Do you have any questions?</legend>
+        <div>Do you have any questions?</div>
         <label for="fname">Name/Nickname
           <input type="text" id="fname" name="fname">
         </label>
         <label for="email">Email
-          <input type="email" id="email" name="email" placeholder="someone@gmail.com" required>
+          <input type="email" id="email" name="email" placeholder="someone@gmail.com">
         </label>
         <label for="date">Date
           <input type="date" id="date" name="date">

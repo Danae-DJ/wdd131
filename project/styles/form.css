@@ -37,7 +37,7 @@ fieldset {
   background-color: var(--color2);
 }
 
-legend {
+div {
   font-weight: bold;
   color: var(--color4);
 }
