@@ -1,29 +1,27 @@
 // Footer date
 const lastModDate = new Date(document.lastModified);
-const options = { year: 'numeric', month: 'long', day: 'numeric' };
-document.getElementById("lastModified").textContent =
-  "Last Modified: " + lastModDate.toLocaleDateString('en-US', options);
-// Populate product dropdown dynamically
-const products = [
-  { id: "fc-1888", name: "flux capacitor", averagerating: 4.5 },
-  { id: "fc-2050", name: "power laces", averagerating: 4.7 },
-  { id: "fs-1987", name: "time circuits", averagerating: 3.5 },
-  { id: "ac-2000", name: "low voltage reactor", averagerating: 3.9 },
-  { id: "jj-1969", name: "warp equalizer", averagerating: 5.0 }
-];
+document.getElementById("lastModified").textContent = "Last Modified: " + lastModDate.toDateString();
 
-const productSelect = document.getElementById("productName");
-products.forEach(product => {
+// Current year in footer
+document.getElementById("currentYear").textContent = new Date().getFullYear();
+
+// Populate dropdown
+const sections = ["Home", "Purpose", "Cycling", "Bicycles", "Equipment"];
+const dropdown = document.getElementById("favoriteSection");
+sections.forEach(section => {
   const option = document.createElement("option");
-  option.value = product.name;
-  option.textContent = product.name;
-  productSelect.appendChild(option);
-})
-// Review count handling
-const reviewCount = localStorage.getItem("reviewCount") || 0;
-localStorage.setItem("reviewCount", parseInt(reviewCount) + 1);
-document.getElementById("reviewCountDisplay").textContent =
-  `Reviews Submitted: ${reviewCount}`;
-if (document.getElementById("totalReviews")) {
-  document.getElementById("totalReviews").textContent = reviewCount;
+  option.value = section.toLowerCase();
+  option.textContent = section;
+  dropdown.appendChild(option);
+});
+
+// Update review count
+if (localStorage.getItem("reviewCount")) {
+  let count = parseInt(localStorage.getItem("reviewCount")) + 1;
+  localStorage.setItem("reviewCount", count);
+  if (document.getElementById("totalReviews")) {
+    document.getElementById("totalReviews").textContent = count;
+  }
+} else {
+  localStorage.setItem("reviewCount", 1);
 }
