@@ -31,14 +31,15 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
   
   /* Links */
   a {
-    color: var(--color3); /* Medium Green for links */
+    color: var(--color5); /* Medium Green for links */
     text-decoration: none;
   }
   
   a:hover {
-    color: var(--color2); /* Pastel Green on hover */
+    color: var(--color1); /* Pastel Green on hover */
   }
   
+
   /* Section Backgrounds */
   section {
     padding: 20px;
@@ -50,8 +51,8 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
   
   /* Buttons */
   button {
-    background-color: var(--color3); /* Medium Green */
-    color: var(--color1); /* Light Yellow */
+    background-color: var(--color1); /* Medium Green */
+    color: var(--color5); /* Light Yellow */
     border: none;
     padding: 10px 20px;
     border-radius: 5px;
@@ -61,6 +62,7 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
   
   button:hover {
     background-color: var(--color4); /* Deep Green */
+    color:var(--color1) ;
   }
   
   /* Navigation */
@@ -78,6 +80,48 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
   nav a.active {
     font-weight: bold;
   }
+
+  /* Hide the navmenu by default for small screens */
+#navmenu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 50px; /* Adjust to align under the header */
+  right: 10px; /* Align with the button */
+  background-color: var(--color5);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+#navmenu.show {
+  display: flex;
+}
+
+#navmenu {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Desktop screens: Always show navmenu as a horizontal bar */
+@media (min-width: 640px) {
+  #navmenu {
+      display: flex;
+      flex-direction: row;
+      position: static;
+      box-shadow: none;
+  }
+
+  #hambutton {
+      display: none; /* Hide the hamburger menu */
+  }
+}
+
+  .Curiosities {
+    margin-left: auto;
+    border-radius: 10px;
+    background-color: var(--color1);
+    text-align: center;
+  }
   
   footer {
     text-align: center;
@@ -86,3 +130,41 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     color: var(--color1); /* Light Yellow */
   }
   
+
+  /*cards*/
+.res-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.res-grid section {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.res-grid section:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.res-grid img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.res-grid h3 {
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.res-grid p {
+  padding: 10px;
+  font-size: 0.9rem;
+}

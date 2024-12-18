@@ -1,4 +1,3 @@
-// Set the current year and last modified date
 const currentYear = new Date().getFullYear();
 document.getElementById("currentYear").innerHTML = `&copy;${currentYear}`;
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
@@ -8,9 +7,15 @@ const hambutton = document.querySelector("#hambutton");
 const navmenu = document.querySelector("#navmenu");
 
 hambutton.addEventListener("click", () => {
-    navmenu.classList.toggle("show");
+    const isExpanded = navmenu.classList.toggle("show");
+    hambutton.setAttribute("aria-expanded", isExpanded);
 });
-
+// Ensure the nav menu is hidden when resizing back to larger screens
+window.addEventListener("resize", () => {
+    if (window.innerWidth >= 640) {
+        navmenu.classList.remove("show");
+    }
+});
 // Curiosities text-changing functionality
 const curiosities = [
     "Cycling improves your mood and reduces stress!",
@@ -25,6 +30,8 @@ function changeCuriosity() {
     curiosityIndex = (curiosityIndex + 1) % curiosities.length;
 }
 setInterval(changeCuriosity, 10000);
+
+
 
 //cards bicycles
 const bicycles = [
@@ -87,18 +94,56 @@ const bicycles = [
     {
         imageUrl: "https://http2.mlstatic.com/D_NQ_NP_2X_640247-MLU75010446376_032024-F.webp",
         bicycleName: "Fat Bikes",
-        description: "Oversized tires for sand, snow, or loose terrain. Great for extreme environments.",
+        description: "Oversized tires for sand, snow, or loose terrain.Great for extreme environments.",
         shopUrl: "https://www.mercadolibre.com.mx/bicicleta-fat-bike-mongoose-dolomite-r26-7v-freno-disco-hidraulico-color-negroazul/p/MLM13183253?pdp_filters=item_id%3AMLM1918531728&from=gshop&matt_tool=43527145&matt_word=&matt_source=google&matt_campaign_id=19660263080&matt_ad_group_id=154438376628&matt_match_type=&matt_network=g&matt_device=c&matt_creative=647515866468&matt_keyword=&matt_ad_position=&matt_ad_type=pla&matt_merchant_id=735123306&matt_product_id=MLM13183253-product&matt_product_partition_id=2189754530543&matt_target_id=pla-2189754530543&gad_source=1&gclid=CjwKCAiAmfq6BhAsEiwAX1jsZ9Q1sXBHlN_VjFcd11U1Ob3ELTZnObv5xu83kK-Ar2o2k864pH-4XhoCjWgQAvD_BwE"
     },
 
     
 ]
 
+createBicycleCard(bicycles);
+
+
+function createBicycleCard(bicycles) {
+    const resGrid = document.querySelector(".res-grid");
+    resGrid.innerHTML = ""; // Clear any existing content
+
+    bicycles.forEach(bicycle => {
+        let card = document.createElement("section");
+        let img = document.createElement("img");
+        let name = document.createElement("h3");
+        let description = document.createElement("p");
+        let link = document.createElement("a");
+
+        name.textContent = bicycle.bicycleName;
+        description.innerHTML = `<span class="label">Description:</span> ${bicycle.description}`;
+        img.setAttribute("src", bicycle.imageUrl);
+        img.setAttribute("alt", `${bicycle.bicycleName}`);
+        img.setAttribute("loading", "lazy");
+
+        link.setAttribute("href", bicycle.shopUrl);
+        link.setAttribute("target", "_blank");
+        link.textContent = "Shop Now";
+
+        // Append all elements to the card
+        card.appendChild(img);
+        card.appendChild(name);
+        card.appendChild(description);
+        card.appendChild(link);
+
+        // Append the card to the grid
+        resGrid.appendChild(card);
+    });
+}
+
+
 
 const bicycleCards = document.getElementById("bicycle-cards");
+bicycleCards.innerHTML = ""; // Clear previous content
+
 bicycles.forEach(bike => {
     const card = `
-        <div>
+        <div class="bicycle-card">
             <img src="${bike.imageUrl}" alt="${bike.bicycleName}" width="200">
             <h3>${bike.bicycleName}</h3>
             <p>${bike.description}</p>
@@ -106,4 +151,3 @@ bicycles.forEach(bike => {
         </div>`;
     bicycleCards.innerHTML += card;
 });
-
