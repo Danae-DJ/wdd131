@@ -81,6 +81,9 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
     font-weight: bold;
   }
 
+  nav a:hover {
+    color: var(--color2);
+  }
   /* Hide the navmenu by default for small screens */
 #navmenu {
   display: none;
