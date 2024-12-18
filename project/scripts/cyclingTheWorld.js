@@ -1,5 +1,5 @@
 const currentYear = new Date().getFullYear();
-document.getElementById("currentYear").innerHTML = `&copy;${currentYear}`;
+document.getElementById("currentYear").innerHTML = `©${currentYear}`;
 document.getElementById("lastModified").textContent = `Last Modification: ${document.lastModified}`;
 
 // Hamburger menu functionality
@@ -137,9 +137,8 @@ function createBicycleCard(bicycles) {
 }
 
 
-
+/* //This other option of cards:
 const bicycleCards = document.getElementById("bicycle-cards");
-bicycleCards.innerHTML = ""; // Clear previous content
 
 bicycles.forEach(bike => {
     const card = `
@@ -150,4 +149,4 @@ bicycles.forEach(bike => {
             <a href="${bike.shopUrl}" target="_blank">Shop Now</a>
         </div>`;
     bicycleCards.innerHTML += card;
-});
+});*/ 

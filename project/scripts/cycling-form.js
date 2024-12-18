@@ -16,12 +16,7 @@ sections.forEach(section => {
 });
 
 // Update review count
-if (localStorage.getItem("reviewCount")) {
-  let count = parseInt(localStorage.getItem("reviewCount")) + 1;
-  localStorage.setItem("reviewCount", count);
-  if (document.getElementById("totalReviews")) {
-    document.getElementById("totalReviews").textContent = count;
-  }
-} else {
-  localStorage.setItem("reviewCount", 1);
-}
+let totalReviews = localStorage.getItem("totalReviews") || 0;
+totalReviews = parseInt(totalReviews) + 1;
+localStorage.setItem("totalReviews", totalReviews);
+document.getElementById("totalReviews").textContent = totalReviews;

@@ -27,6 +27,7 @@ form {
   background-color: var(--color4);
   padding: 1rem;
   border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 fieldset {
@@ -66,6 +67,14 @@ input[type="submit"], button {
 input[type="submit"]:hover, button:hover {
   background-color: var(--color2);
 }
+
+
+footer {
+    text-align: center;
+    background-color: var(--color5); /* Dark Brown */
+    color: var(--color1); /* Light Yellow */
+  }
+  
 
 /* Media Queries */
 @media (min-width: 35rem) {

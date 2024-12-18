@@ -114,6 +114,14 @@ html {-webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
       box-shadow: none;
   }
 
+  @media (max-width: 640px) {
+    .bicycle-card {
+      width: 100%;
+    }
+  }
+
+
+
   #hambutton {
       display: none; /* Hide the hamburger menu */
   }
