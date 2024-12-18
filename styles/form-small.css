@@ -1,4 +1,3 @@
-/* Root color variables */
 :root {
     --color1: #d3c6cc;
     --color2: #e2c3c6;
@@ -7,7 +6,6 @@
     --color5: #838383;
 }
 
-/* General styles */
 html {
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;
@@ -25,7 +23,6 @@ body {
     background-color: var(--color1);
 }
 
-/* Header styling */
 header {
     padding: 0.5rem 2%;
     background-color: var(--color2);
@@ -38,14 +35,12 @@ header h1 {
     color: black;
 }
 
-/* Main form styling */
 main {
     padding: 2%;
     background-color: var(--color4);
     border-radius: 8px;
 }
 
-/* Form fieldsets */
 .wf1 fieldset {
     margin: 2rem 0;
     border: 1px solid var(--color5);
@@ -59,7 +54,6 @@ main {
     margin-bottom: 0.5rem;
 }
 
-/* Labels and input styling */
 .wf1 label {
     display: block;
     margin-top: 1rem;
@@ -80,7 +74,6 @@ main {
     color: var(--color5);
 }
 
-/* Required field styling */
 .wf1 input:required {
     border: 2px solid red;
 }
@@ -89,7 +82,6 @@ main {
     border: 2px solid green;
 }
 
-/* Checkbox and radio styling */
 .wf1 input[type="checkbox"],
 .wf1 input[type="radio"] {
     margin-right: 8px;
@@ -136,5 +128,3 @@ button:hover {
     background-color: var(--color2);
 }
 
-
-/*----------- original video reference: https://www.youtube.com/watch?v=vCG7tfn9Yw8 --------------*/

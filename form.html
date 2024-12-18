@@ -25,7 +25,6 @@
     <h2>Share Your Thoughts</h2>
     <p id="reviewCountDisplay">Reviews Submitted: 0</p>
     <form method="get" action="form-thanks.html" class="wf1">
-      <!-- Overall Rating -->
       <fieldset>
         <legend>Product Name</legend>
         <label for="productName">Select a product:
@@ -67,14 +66,12 @@
         </label>
       </fieldset>
 
-      <!-- Date of Installation -->
       <fieldset>
         <legend>Date of Installation</legend>
         <label for="installation-date">When did you install the product?</label>
         <input type="date" id="installation-date" name="completeDate" required>
       </fieldset>
 
-      <!-- Useful Features -->
       <fieldset>
         <legend>Which features did you find useful in the product?</legend>
         <div>(Check all that apply)</div>
@@ -84,19 +81,16 @@
         <label><input type="checkbox" name="features" value="Design">Design</label>
       </fieldset>
 
-      <!-- Written Review -->
       <fieldset>
         <legend>Written Review (Optional)</legend>
         <textarea name="review" placeholder="Write your review here..."></textarea>
       </fieldset>
 
-      <!-- Your Name -->
       <fieldset>
         <legend>Your Name (Optional)</legend>
         <input type="text" name="name" placeholder="Enter your name">
       </fieldset>
 
-      <!-- Submit Button -->
       <input type="submit" value="Post Review">
     </form>
   </main>
